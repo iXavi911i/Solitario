@@ -931,25 +931,46 @@ public class Mazo {
             case 12:
                 switch(pD){
                     case 1:
-                        MoverCartas(mazo.get(apuntador-1),pila1.get(pila1.size()-1),pI,pD);
+                        if(!pila1.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila1.get(pila1.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
                     case 2:
-                        MoverCartas(mazo.get(apuntador-1),pila2.get(pila2.size()-1),pI,pD);
+                        if(!pila2.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila2.get(pila2.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
                     case 3:
-                        MoverCartas(mazo.get(apuntador-1),pila3.get(pila3.size()-1),pI,pD);
+                        if(!pila3.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila3.get(pila3.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
-                    case 4:    
-                        MoverCartas(mazo.get(apuntador-1),pila4.get(pila4.size()-1),pI,pD);
+                    case 4:
+                        if(!pila4.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila4.get(pila4.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
                     case 5:
-                        MoverCartas(mazo.get(apuntador-1),pila5.get(pila5.size()-1),pI,pD);
+                        if(!pila5.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila5.get(pila5.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
                     case 6:
-                        MoverCartas(mazo.get(apuntador-1),pila6.get(pila6.size()-1),pI,pD);
+                        if(!pila6.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila6.get(pila6.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
                     case 7:
-                        MoverCartas(mazo.get(apuntador-1),pila7.get(pila7.size()-1),pI,pD);
+                        if(!pila7.isEmpty())
+                            MoverCartas(mazo.get(apuntador-1),pila7.get(pila7.size()-1),pI,pD);
+                        else
+                            MoverCartas(mazo.get(apuntador-1),pI,pD);
                         break;
                     case 8:
                         if(pilaP1.isEmpty()){
