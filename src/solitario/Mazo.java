@@ -1309,8 +1309,8 @@ public class Mazo {
                 break;
                 
             case 12:
-                resp = mazo.get(apuntador).toString();
                 mazo.remove(apuntador-1);
+                resp = mazo.get(apuntador-1).toString();
                 break;
         }
     }
