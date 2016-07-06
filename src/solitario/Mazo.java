@@ -234,8 +234,6 @@ public class Mazo {
     }
     
     public void actualizaPantalla(){
-        
-        System.out.println(mazo);
         System.out.println("Baraja descarte: " + getCartaMazo() + "\n");
         System.out.println("Pilas de palos: \n");
         System.out.println(getCartaPilaPalos(pilaP1) + " | " + getCartaPilaPalos(pilaP2) + " | " + getCartaPilaPalos(pilaP3) + " | " + getCartaPilaPalos(pilaP4) + "\n");
@@ -1380,7 +1378,6 @@ public class Mazo {
 }
 
 //por hacer:
-    // modificar menu mover escalera
     // verificar cuando se gana
 
 // errores conocidos: 
