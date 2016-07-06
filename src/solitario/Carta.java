@@ -11,6 +11,7 @@ package solitario;
  */
 public class Carta {
     private String palo;
+    private String prueba;
     private int valor;
     public Carta(int valor1, String palo1){
         valor = valor1;
