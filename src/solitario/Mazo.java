@@ -37,6 +37,7 @@ public class Mazo {
     private ArrayList<Carta> pilaP4;
     private int apuntador;
     private String resp;
+    private int apuntador2;
     
     public Mazo() {
         
@@ -77,6 +78,7 @@ public class Mazo {
         estadoP7.add(false);
         estadoP7.add(true);
         apuntador = 0;
+        apuntador2 = 0;
         resp = "[]";
         
         for(String palo: palos){
@@ -232,6 +234,8 @@ public class Mazo {
     }
     
     public void actualizaPantalla(){
+        
+        System.out.println(mazo);
         System.out.println("Baraja descarte: " + getCartaMazo() + "\n");
         System.out.println("Pilas de palos: \n");
         System.out.println(getCartaPilaPalos(pilaP1) + " | " + getCartaPilaPalos(pilaP2) + " | " + getCartaPilaPalos(pilaP3) + " | " + getCartaPilaPalos(pilaP4) + "\n");
@@ -262,8 +266,7 @@ public class Mazo {
         }
         else{
             resp = mazo.get(apuntador).toString();
-            apuntador++;
-        }
+            apuntador++;}
     }
     
     public void CrearPilasPalos(){
@@ -1309,8 +1312,13 @@ public class Mazo {
                 break;
                 
             case 12:
-                mazo.remove(apuntador-1);
-                resp = mazo.get(apuntador-1).toString();
+                if(apuntador==1){
+                    resp = mazo.get(apuntador).toString();
+                    mazo.remove(apuntador-1);}
+                else{
+                    apuntador--;
+                    resp = mazo.get(apuntador-1).toString();
+                    mazo.remove(apuntador);}
                 break;
         }
     }
