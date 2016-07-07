@@ -234,16 +234,18 @@ public class Mazo {
     }
     
     public void actualizaPantalla(){
-        System.out.println("Baraja descarte: " + getCartaMazo() + "\n");
-        System.out.println("Pilas de palos: \n");
-        System.out.println(getCartaPilaPalos(pilaP1) + " | " + getCartaPilaPalos(pilaP2) + " | " + getCartaPilaPalos(pilaP3) + " | " + getCartaPilaPalos(pilaP4) + "\n");
-        ImprimePilas();
+            System.out.println("Baraja descarte: " + getCartaMazo() + "\n");
+            System.out.println("Pilas de palos: \n");
+            System.out.println(getCartaPilaPalos(pilaP1) + " | " + getCartaPilaPalos(pilaP2) + " | " + getCartaPilaPalos(pilaP3) + " | " + getCartaPilaPalos(pilaP4) + "\n");
+            ImprimePilas();
+        if(juegoTerminado()) 
+            System.out.println("Ganaste, juego terminado!");
     }
     
     private Boolean juegoTerminado(){
-        if(mazo.isEmpty() && estadoP1.contains(false))
+        if(mazo.isEmpty() && !estadoP1.contains(false) && !estadoP2.contains(false) && !estadoP3.contains(false) && !estadoP4.contains(false) && !estadoP5.contains(false) && !estadoP6.contains(false) && !estadoP7.contains(false))
             return true;
-        return false;
+        else return false;
     }
     
     private String getCartaPilaPalos(ArrayList<Carta> lista){
